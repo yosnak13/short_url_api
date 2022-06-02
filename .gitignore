@@ -1,0 +1,6 @@
+backend/vendor
+
+db
+!/backend/db
+
+.env
