@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+10.times do |n|
+  Url.create(
+    original_url: "http://www.loooooooooooong.url.No.#{n + 1}.ne.jp",
+    short_url: "http://localhost:3000/short#{n + 1}.ne.jp"
+  )
+end
