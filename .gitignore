@@ -1,4 +1,5 @@
 backend/vendor
+.bash_history
 
 db
 !/backend/db
