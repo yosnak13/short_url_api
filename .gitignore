@@ -4,4 +4,6 @@ backend/vendor
 db
 !/backend/db
 
+frontend/.npm/_logs
+
 .env
