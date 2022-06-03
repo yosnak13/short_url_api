@@ -8,7 +8,7 @@ class UrlsController < ApplicationController
     if url.save
       render json: url
     else
-      render json:url.errors, status: 422
+      render json: url.errors, status: 422
     end
   end
 
