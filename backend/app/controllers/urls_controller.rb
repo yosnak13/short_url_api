@@ -5,8 +5,7 @@ class UrlsController < ApplicationController
 
   def create
     url = Url.new(url_params)
-    short_string = SecureRandom.alphanumeric(5)
-    url.update(short_url: short_string)
+    url.create_short_url(url)
     if url.save
       render json: url
     else
