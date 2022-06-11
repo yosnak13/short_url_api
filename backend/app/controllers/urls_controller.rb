@@ -6,6 +6,7 @@ class UrlsController < ApplicationController
   def create
     url = Url.new(url_params)
     url.update(short_url: "abcdef")
+    binding.pry
     url.create_short_url
     if url.save
       render json: url
