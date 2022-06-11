@@ -5,6 +5,7 @@ class UrlsController < ApplicationController
 
   def create
     url = Url.new(url_params)
+    url.create_short_url(url)
     if url.save
       render json: url
     else
@@ -15,6 +16,6 @@ class UrlsController < ApplicationController
   private
 
   def url_params
-    params.permit(:original_url, :short_url)
+    params.permit(:original_url)
   end
 end
