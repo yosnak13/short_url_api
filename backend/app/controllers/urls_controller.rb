@@ -16,7 +16,7 @@ class UrlsController < ApplicationController
   def show
     return_original_url = Url.find_by(short_url: params[:unmatched_route])
     if return_original_url.present?
-      render json: return_original_url
+      render json: return_original_url.original_url
     else
       render json: { message: "登録されていない短縮URLです" }, status: 400
     end
