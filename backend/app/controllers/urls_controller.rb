@@ -9,7 +9,7 @@ class UrlsController < ApplicationController
     if url.save
       render json: url
     else
-      render json: url.errors, status: 422
+      render json: { message: "URLを入力してください" }, status: 400
     end
   end
 
