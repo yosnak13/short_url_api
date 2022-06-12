@@ -9,7 +9,16 @@ class UrlsController < ApplicationController
     if url.save
       render json: url
     else
-      render json: url.errors, status: 422
+      render json: { message: "URLを入力してください" }, status: 400
+    end
+  end
+
+  def show
+    return_original_url = Url.find_by(short_url: params[:unmatched_route])
+    if return_original_url.present?
+      render json: return_original_url.original_url
+    else
+      render json: { message: "登録されていない短縮URLです" }, status: 400
     end
   end
 
