@@ -53,7 +53,7 @@ git version 2.32.1 (Apple Git-133) #これが表示されればGitが使える�
 $ git pull https://github.com/yosnak13/short_url_api
 $ ls
 Makefile    backend      docker-compose.yml      frontend
-# 上記の4つのファイルが表示がでれば成功です。
+# 上記の4つのファイルが表示されていれば成功です。
 ```
 
 
@@ -121,3 +121,4 @@ http://localhost:3000
 ![スクリーンショット 2022-06-12 22.04.14.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/674242/4f9d3394-ab6d-bfce-51d1-2d551de30e13.png)
 
 ## 8.Postmanを使用してAPI機能の確認
+PCにインストールしたPostmanを起動して、Workspacesタブから「create Workspace」をクリックして新規のワークスペースを作成。Workspace名、description、Visibilityは自由に設定してください。作成したら、＋タブをクリックしてhttpリクエストを操作できる画面になりますので、あとはURL入力に「http://localhost:3000/urls」などを入力し、API操作してください。
