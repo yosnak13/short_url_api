@@ -33,3 +33,5 @@ db
 
 # Ignore .env
 .env
+
+.npm
