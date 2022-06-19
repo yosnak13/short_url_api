@@ -9,6 +9,10 @@
 <script>
 import axios from 'axios';
 export default {
+  name: 'Urls',
+    data: () => ({
+      urls: []
+    }),
   methods: {
     fetchUrls(){
       axios
